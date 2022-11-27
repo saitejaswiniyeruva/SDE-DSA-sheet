@@ -3,6 +3,8 @@ using namespace std;
 void setZeros(vector<vector<int>> &matrix)
 {
     // Write your code here.
+    //n=rows
+    //m=coloums
     int n = matrix.size();
     int m = matrix[0].size();
     for(int i=0;i<n;i++) {
@@ -25,4 +27,21 @@ void setZeros(vector<vector<int>> &matrix)
                 matrix[i][j]=0;
         }
     }
+}
+
+int main() {
+    vector<vector<int>> matrix;
+    for(int i=0;i<matrix.size();i++) {
+        for(int j=0;j<matrix[0].size();j++) {
+            cin>>matrix[i][j];
+        }
+    }
+    setZeros(matrix);
+    for(int i=0;i<matrix.size();i++) {
+        for(int j=0;j<matrix[0].size();j++) {
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+    return 0;
 }
