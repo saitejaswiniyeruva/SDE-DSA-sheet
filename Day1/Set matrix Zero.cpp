@@ -1,3 +1,8 @@
+//question: https://takeuforward.org/data-structure/set-matrix-zero/
+//Time complexity: O(n^3)
+//Space Complexity: O(1)
+
+
 #include <bits/stdc++.h>
 using namespace std;
 void setZeros(vector<vector<int>> &matrix)
@@ -28,16 +33,19 @@ void setZeros(vector<vector<int>> &matrix)
         }
     }
 }
-
 int main() {
-    vector<vector<int>> matrix;
-    for(int i=0;i<matrix.size();i++) {
-        for(int j=0;j<matrix[0].size();j++) {
-            cin>>matrix[i][j];
+    int row,col;
+    cin>>row>>col;
+    vector<vector<int>> matrix(row);
+    for(int i=0;i<row;i++) {
+        int temp;
+        for(int j=0;j<col;j++) {
+            cin>>temp;
+            matrix[i].push_back(temp);
         }
     }
     setZeros(matrix);
-    for(int i=0;i<matrix.size();i++) {
+    for(int i=0;i<row;i++) {
         for(int j=0;j<matrix[0].size();j++) {
             cout<<matrix[i][j]<<" ";
         }
